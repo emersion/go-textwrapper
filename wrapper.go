@@ -54,3 +54,8 @@ func New(w io.Writer, sep string, l int) io.Writer {
 		w: w,
 	}
 }
+
+// Creates a RFC822 text wrapper. It adds a CRLF (ie. \r\n) each 76 characters.
+func NewRFC822(w io.Writer) io.Writer {
+	return New(w, "\r\n", 76)
+}
