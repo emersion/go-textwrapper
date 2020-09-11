@@ -6,7 +6,6 @@ import (
 )
 
 type writer struct {
-	Sep string
 	Len int
 
 	sepBytes []byte
@@ -51,7 +50,6 @@ func (w *writer) Write(b []byte) (N int, err error) {
 func New(w io.Writer, sep string, l int) io.Writer {
 	return &writer{
 		Len:      l,
-		Sep:      sep,
 		sepBytes: []byte(sep),
 		w:        w,
 	}
