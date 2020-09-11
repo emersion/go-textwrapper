@@ -57,7 +57,7 @@ func TestNew(t *testing.T) {
 func BenchmarkWriteWith10K(b *testing.B) {
 	b.ReportAllocs()
 
-	input := make([]byte, 10_000)
+	input := make([]byte, 10000)
 	w := textwrapper.New(ioutil.Discard, "/", 3)
 	for i := 0; i < b.N; i++ {
 		_, err := w.Write(input)
@@ -70,7 +70,7 @@ func BenchmarkWriteWith10K(b *testing.B) {
 func BenchmarkWriteWith100K(b *testing.B) {
 	b.ReportAllocs()
 
-	input := make([]byte, 100_000)
+	input := make([]byte, 100000)
 	w := textwrapper.New(ioutil.Discard, "/", 3)
 	for i := 0; i < b.N; i++ {
 		_, err := w.Write(input)
@@ -83,7 +83,7 @@ func BenchmarkWriteWith100K(b *testing.B) {
 func BenchmarkWriteWith1M(b *testing.B) {
 	b.ReportAllocs()
 
-	input := make([]byte, 1_000_000)
+	input := make([]byte, 1000000)
 	w := textwrapper.New(ioutil.Discard, "/", 3)
 	for i := 0; i < b.N; i++ {
 		_, err := w.Write(input)
